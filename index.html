@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Population of India</h1>
+    <div class="population">
+      <div class="male">
+        <div class="outer">
+          <div class="inner">
+            <div id="percentage1"></div>
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          width="160px"
+          height="160px"
+        >
+          <defs>
+            <linearGradient id="GradientColor1">
+              <stop offset="0%" stop-color="#2E3192" />
+              <stop offset="100%" stop-color="#1BFFFF" />
+            </linearGradient>
+          </defs>
+          <circle class="male" cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="male">
+        <div class="outer">
+          <div class="inner">
+            <div id="percentage2"></div>
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          width="160px"
+          height="160px"
+        >
+          <defs>
+            <linearGradient id="GradientColor2">
+              <stop offset="0%" stop-color="#2E3192" />
+              <stop offset="100%" stop-color="#1BFFFF" />
+            </linearGradient>
+          </defs>
+          <circle
+            class="female"
+            cx="80"
+            cy="80"
+            r="70"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <script>
+      let male = document.getElementById("percentage1");
+      let female = document.getElementById("percentage2");
+
+      let maleCounter = 0;
+      let femaleCounter = 0;
+      let maleId = setInterval(() => {
+        maleCounter += 1;
+        male.innerHTML = maleCounter + "% Male";
+        if (maleCounter >= 65) {
+          clearInterval(maleId);
+        }
+      }, 30);
+
+      let femaleId = setInterval(() => {
+        femaleCounter += 1;
+        female.innerHTML = femaleCounter + "% Female";
+        if (femaleCounter >= 35) {
+          clearInterval(femaleId);
+        }
+      }, 55);
+    </script>
+  </body>
+</html>

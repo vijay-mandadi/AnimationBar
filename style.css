@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+h1 {
+  margin-bottom: 70px;
+}
+
+body {
+  background: #e3edf7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.population {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+
+.male {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.outer {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+#percentage1 {
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#percentage2 {
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.male {
+  fill: none;
+  stroke: url(#GradientColor1);
+  stroke-width: 20px;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: male 2s linear forwards;
+}
+
+.female {
+  fill: none;
+  stroke: url(#GradientColor2);
+  stroke-width: 20px;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: female 2s linear forwards;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+}
+
+@keyframes male {
+  100% {
+    stroke-dashoffset: 157;
+  }
+}
+
+@keyframes female {
+  100% {
+    stroke-dashoffset: 292;
+  }
+}
